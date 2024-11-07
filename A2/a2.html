@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const flexForm = document.getElementById('flexForm');
+        const flexContainer = document.getElementById('flexContainer');
+        const items = document.querySelectorAll('.item');
+    
+        // Cambiar propiedades del contenedor
+        flexForm.addEventListener('change', function() {
+            const direction = document.getElementById('flexDirection').value;
+            const justify = document.getElementById('justifyContent').value;
+            const align = document.getElementById('alignItems').value;
+            const wrap = document.getElementById('flexWrap').value;
+    
+            flexContainer.style.flexDirection = direction;
+            flexContainer.style.justifyContent = justify;
+            flexContainer.style.alignItems = align;
+            flexContainer.style.flexWrap = wrap;
+        });
+    
+        // Función para aplicar cambios a cada div
+        function applyStyles() {
+            items.forEach((item, index) => {
+                const width = document.getElementById(`width${index + 1}`).value;
+                const height = document.getElementById(`height${index + 1}`).value;
+                const order = document.getElementById(`order${index + 1}`).value;
+    
+                if (width) {
+                    item.style.width = width;
+                }
+                if (height) {
+                    item.style.height = height;
+                }
+                if (order) {
+                    item.style.order = order;
+                }
+            });
+        }
+    
+        // Añadir event listeners a los inputs de cada div
+        for (let i = 1; i <= items.length; i++) {
+            document.getElementById(`width${i}`).addEventListener('input', applyStyles);
+            document.getElementById(`height${i}`).addEventListener('input', applyStyles);
+            document.getElementById(`order${i}`).addEventListener('input', applyStyles);
+        }
+    </script>
+    
+</body>
+</html>

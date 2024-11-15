@@ -1,0 +1,40 @@
+h1{
+    color:rgba(0, 195, 255, 0.815);
+    font-family: "Ultra", serif;
+}
+body{
+    color:rgba(0, 195, 255, 0.815);
+    font-family: "Leckerli One", cursive;
+    background-color: aquamarine;
+
+}
+.cuadrado{
+    width: 90%;
+    height: 75%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0 4px 4px 5px rgb(139, 139, 139);
+}
+
+.item{
+    background-color: aqua;
+    width: 100px;
+    height: 200px;
+    border-radius: 4px;
+    margin: 10px;
+}
+.container{
+    width: 1000px;
+    background-color: rgb(18, 166, 192);
+    color:whitesmoke;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    display:flex;
+    height: 200px;
+    border-radius: 3px;
+}
+

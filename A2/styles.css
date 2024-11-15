@@ -25,6 +25,8 @@ body{
     height: 200px;
     border-radius: 4px;
     margin: 10px;
+    transition: all 1s;
+
 }
 .container{
     width: 1000px;
@@ -36,5 +38,6 @@ body{
     display:flex;
     height: 200px;
     border-radius: 3px;
+    transition: all 2s;
 }
 
